@@ -1,0 +1,127 @@
+@font-face
+{
+  font-family: 'Source Code Pro';
+  src: url('../fonts/SourceCodePro-Regular.woff2') format('woff2'),
+       url('../fonts/SourceCodePro-Regular.woff') format('woff'),
+       url('../fonts/SourceCodePro-Regular.ttf') format('truetype');
+}
+
+@font-face
+{
+  font-family: 'Source Sans Pro';
+  src: url('../fonts/SourceSansPro-Regular.woff2') format('woff2'),
+       url('../fonts/SourceSansPro-Regular.woff') format('woff'),
+       url('../fonts/SourceSansPro-Regular.ttf') format('truetype');
+}
+
+@font-face
+{
+  font-family: 'Source Serif Pro';
+  src: url('../fonts/SourceSerifPro-Bold.woff2') format('woff2'),
+       url('../fonts/SourceSerifPro-Bold.woff') format('woff'),
+       url('../fonts/SourceSerifPro-Bold.ttf') format('truetype');
+}
+
+button
+{
+  background-color: lightgrey;
+  border: none;
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.5s;
+  outline: none;
+}
+
+button:hover
+{
+  background-color: lightblue;
+}
+
+button:active
+{
+  background-color: lightblue;
+}
+
+code, kbd, pre, samp, var
+{
+  font-family: 'Source Code Pro', monospace;
+  /*font-size: 1em;*/
+}
+
+h1, h2, h3, h4, h5, h6
+{
+  font-family: 'Source Serif Pro', serif;
+  font-style: bold;
+}
+
+html
+{
+  font-size: 1.4em;
+}
+
+input
+{
+  border: none;
+  border-bottom: solid 0.01em grey;
+  transition: border 0.5s;
+  padding: 0.25em 0.0em;
+  text-decoration: none;
+}
+
+input:focus
+{
+  border: none;
+  border-bottom: solid 0.01em lightblue;
+  outline: none;
+}
+
+/* TRY THIS: http://codepen.io/lorenzodianni/pen/ByXMYB */
+
+input[type="radio"]
+{
+  display:none;
+}
+input[type="radio"] + label span
+{
+  border-radius: 50%;
+  border: solid 0.01em;
+  padding: 0.1em;
+  background-color: blue;
+  display: inline-block;
+  width: 0.50em;
+  height:0.5em;
+  margin: 0;
+  vertical-align:middle;
+  background-color: white;
+}
+input[type="radio"]:checked + label span
+{
+  border: solid 0.01em;
+  padding: 0.1em;
+  background-color: lightblue;
+}
+
+main
+{
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0 auto;
+  max-width: 40em;
+}
+
+.flex-container
+{
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-2
+{
+  flex: 1;
+  flex-basis: 18em;
+  background: tomato;
+  color: white;
+  padding: 0em 1em;
+}
