@@ -57,7 +57,7 @@ h6{
 }
 
 html{
-  background-color: #fafafa;
+  background-color: #FAFAFA;
   box-sizing: border-box;
   color: #212121;
   font-family: 'Source Sans Pro', sans-serif;
@@ -72,50 +72,47 @@ textarea{
   padding: 0.25em;
 }
 
-input:disabled,
-textarea:disabled{
-  color: #9E9E9E;
-}
+  input:disabled,
+  textarea:disabled{
+    color: #9E9E9E;
+  }
 
-input:disabled + label,
-textarea:disabled + label{
-  color: #9E9E9E;
-}
-
-input:focus,
-textarea:focus{
-  border-bottom: solid 1px #2196F3;
-  outline: none;
-  transition: 0.5s;
-}
-
-input:focus + label,
-textarea:focus + label{
-  color: #2196F3;
-  transition: 0.5s;
-}
+  input:focus,
+  textarea:focus{
+    outline: none;
+  }
 
 input + label,
 textarea + label{
   font-size: 80%;
+  padding-left: 0.25em;
   transition: 0.5s;
 }
 
+  input:disabled + label,
+  textarea:disabled + label{
+    color: #9E9E9E;
+  }
+
+  input:focus + label,
+  textarea:focus + label{
+    color: #2196F3;
+    transition: 0.5s;
+  }
+
 /* FILLABLE FIELDS */
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="email"],
-input[type="month"],
-input[type="number"],
-input[type="password"],
-input[type="range"],
-input[type="search"],
-input[type="tel"],
-input[type="text"],
-input[type="time"],
-input[type="url"],
-input[type="week"],
+input[type^=date],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=range],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week],
 textarea{
   display: block;
   border-bottom: solid 1px #616161;
@@ -123,13 +120,30 @@ textarea{
   transition: 0.5s;
 }
 
-input[type="password"]{
+  input[type^=date]:focus,
+  input[type=email]:focus,
+  input[type=month]:focus,
+  input[type=number]:focus,
+  input[type=password]:focus,
+  input[type=range]:focus,
+  input[type=search]:focus,
+  input[type=tel]:focus,
+  input[type=text]:focus,
+  input[type=time]:focus,
+  input[type=url]:focus,
+  input[type=week]:focus,
+  textarea:focus{
+    border-bottom: solid 1px #2196F3;
+    transition: 0.5s;
+  }
+
+input[type=password]{
   font-family: "Source Code Pro", fixed;
 }
 
-input[type="button"],
-input[type="reset"],
-input[type="submit"]{
+input[type=button],
+input[type=reset],
+input[type=submit]{
   background-color: #FFFFFF;
   border: solid 1px #616161;
   color: #616161;
@@ -138,54 +152,42 @@ input[type="submit"]{
   transition: 0.5s;
 }
 
-input[type="button"]:focus,
-input[type="reset"]:focus,
-input[type="submit"]:focus,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover{
-  background-color: #FFFFFF;
-  color: white;
-  transition: 0.5s;
-}
+  input[type=button]:focus,
+  input[type=reset]:focus,
+  input[type=submit]:focus,
+  input[type=button]:hover,
+  input[type=reset]:hover,
+  input[type=submit]:hover{
+    background-color: #2196F3;
+    color: #FFFFFF;
+    transition: 0.5s;
+  }
 
-input[type="checkbox"] + radio,
-input[type="radio"] + label{
+input[type=checkbox] + label,
+input[type=radio] + label{
   font-size: 100%
 }
 
-input[type="file"]:focus{
-  border-bottom: none;
-  outline: none;
-}
-
-input[type="file"]:focus + label{
+input[type=color]:focus + label,
+input[type=file]:focus + label,
+input[type=image]:focus + label{
   color: #2196F3;
 }
 
-input[type="date"]:disabled,
-input[type="datetime"]:disabled,
-input[type="datetime-local"]:disabled,
-input[type="email"]:disabled,
-input[type="month"]:disabled,
-input[type="number"]:disabled,
-input[type="password"]:disabled,
-input[type="range"]:disabled,
-input[type="search"]:disabled,
-input[type="tel"]:disabled,
-input[type="text"]:disabled,
-input[type="time"]:disabled,
-input[type="url"]:disabled,
-input[type="week"]:disabled,
-textarea:disabled{
-  border-bottom: solid 1px #9E9E9E;
-  color: #9E9E9E;
+kbd{
+  background: #E0E0E0;
+  border-radius: 0.25em;
+  padding: 0 0.25em;
 }
 
 main{
   margin: 0 auto;
   max-width: 40em;
   padding: 1em;
+}
+
+mark{
+  background-color: rgba(#ffeb3b, 0.54);
 }
 
 section{
@@ -229,12 +231,12 @@ nav ul li a{
   text-decoration: none;
 }
 
-nav ul li a:hover:not(.active),
-nav ul li a.active{
-  color: purple;
-  border-bottom: none;
-  border-right: none;
-}
+  nav ul li a:hover:not(.active),
+  nav ul li a.active{
+    color: purple;
+    border-bottom: none;
+    border-right: none;
+  }
 
 /* DESKTOP STYLES */
 
@@ -243,8 +245,29 @@ nav ul li a.active{
     flex: 1;
   }
 
-  /* flex fractions */
+  nav ul{
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
 
+  nav ul li a{
+    border-right: 2px solid #f1f1f1;
+    height: auto;
+    display: block;
+    padding-right: 1em;
+  }
+
+    nav ul li a:hover:not(.active),
+    nav ul li a.active {
+      color: black;
+      border-bottom: none;
+      border-right: 2px solid #2196F3;
+    }
+
+
+  /* flex fractions */
   .one-sixth{
     flex: calc(1 / 6);
   }
@@ -271,27 +294,6 @@ nav ul li a.active{
 
   .five-sixth{
     flex: calc(5 / 6);
-  }
-
-  nav ul{
-    background-color: #f1f1f1;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
-  }
-
-  nav ul li a{
-    border-right: 2px solid #f1f1f1;
-    height: auto;
-    display: block;
-    padding-right: 1em;
-  }
-
-  nav ul li a:hover:not(.active),
-  nav ul li a.active {
-    color: black;
-    border-bottom: none;
-    border-right: 2px solid #2196F3;
   }
 
 }
