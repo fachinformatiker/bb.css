@@ -23,6 +23,25 @@
   box-sizing: inherit;
 }
 
+a{
+  color: #9E9E9E;
+  transition: color 0.5s;
+}
+
+  a:hover{
+    color: #2196F3;
+    cursor: pointer;
+    transition: color 0.5s;
+  }
+
+  abbr:hover{
+    cursor: help;
+  }
+
+blockquote cite:before{
+    content: '-\0000a0';
+}
+
 body{
   margin: 0;
 }
@@ -35,12 +54,54 @@ var{
   font-family: 'Source Code Pro', monospace;
 }
 
+code,
+ins,
+var{
+  background-color: #E0E0E0;
+  text-decoration: none;
+}
+
+pre,
+table{
+  overflow: auto;
+  word-wrap: break-word;
+}
+
+dd{
+  padding-bottom: 0.5em;
+}
+
+del{
+  color: #9E9E9E;
+}
+
+dt{
+  font-family: "Source Serif Pro", serif;
+  font-weight: bold;
+}
+
 fieldset{
   border: solid 1px #616161;
 }
 
 fieldset legend{
   font-size: 80%;
+}
+
+figcaption{
+  font-style: italic;
+  font-size: 80%;
+  padding-top: 0.5em;
+}
+
+figure{
+  background-color: #E0E0E0;
+  padding: 1em;
+}
+
+figure img{
+  width: 100%;
+  height: auto;
 }
 
 form{
@@ -56,12 +117,18 @@ h6{
   font-family: 'Source Serif Pro', serif;
 }
 
-html{
-  background-color: #FAFAFA;
+hr{
+  border: 0;
+  height: 1px;
+  background: #616161;
+}
+
+html {
   box-sizing: border-box;
+  background-color: #FAFAFA;
   color: #212121;
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 20px;
+  /*font-size: 20px;*/
 }
 
 input,
@@ -183,11 +250,23 @@ kbd{
 main{
   margin: 0 auto;
   max-width: 40em;
-  padding: 1em;
+  padding: 0.5em;
 }
 
 mark{
   background-color: rgba(#ffeb3b, 0.54);
+}
+
+pre, table{
+  autoflow-x: auto;
+  white-space: pre-wrap;
+}
+
+samp{
+  background-color: #424242;
+  color: #E0E0E0;
+  padding: 0.5em;
+  display: block;
 }
 
 section{
@@ -245,6 +324,15 @@ nav ul li a{
     flex: 1;
   }
 
+  body{
+    font-size: 20px;
+  }
+
+  main{
+    padding: 2em 1em;
+  }
+
+
   nav ul{
     background-color: #f1f1f1;
     position: fixed;
@@ -253,6 +341,7 @@ nav ul li a{
   }
 
   nav ul li a{
+    border-bottom: none;
     border-right: 2px solid #f1f1f1;
     height: auto;
     display: block;
@@ -265,7 +354,6 @@ nav ul li a{
       border-bottom: none;
       border-right: 2px solid #2196F3;
     }
-
 
   /* flex fractions */
   .one-sixth{
@@ -301,6 +389,11 @@ nav ul li a{
 /* TABLET STYLES */
 
 @media screen and (max-width: 1200px) and (min-width: 400px){
+  main{
+    padding: 2em 1em;
+  }
+
+
   nav ul{
     width: 100%;
     height: auto;
