@@ -43,6 +43,3 @@ sftp-config.json
 
 # Testing / Misc Files #
 ########################
-*.html
-*.jpg
-*.js

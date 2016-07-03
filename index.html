@@ -1,0 +1,344 @@
+<!doctype html>
+<html ng-app="bbApp">
+
+  <head>
+   <link href="/css/bb.css" rel="stylesheet">
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
+    <title>bb.css</title>
+  </head>
+
+  <body>
+    <script type="text/ng-template" id="pages/home.html">
+      <section>
+        <article>
+          <h2><i class="fa fa-lightbulb-o fa-fw" aria-hidden="true"></i> Motivation</h2>
+          <p>To create a minimalist css framework that is:</p>
+          <ul>
+            <li>similar to pure.css,</li>
+            <li>much smaller than bootstrap,</li>
+            <li>uses flexbox instead of grids, and</li>
+            <li>doesn't require classes</li>
+          </ul>
+
+          <h2><i class="fa fa-file-code-o fa-fw" aria-hidden="true"></i> Installation</h2>
+          <p>Drop <code>bb.css</code> in your css folder. Link to <code>bb.css</code> in your html head.</p>
+          <pre><samp>&lt;link rel="stylesheet" type="text/css" href="bb.css"&gt;</samp></pre>
+
+          <h2><i class="fa fa-user fa-fw" aria-hidden="true"></i> Contributors</h2>
+          <p>It's just me (<a href="">jim@jpmck.com</a>).</p>
+        </article>
+      </section>
+    </script>
+
+    <script type="text/ng-template" id="pages/style.html">
+      <section>
+          <article>
+            <h2><i class="fa fa-th fa-fw" aria-hidden="true"></i> Flexgrid</h2>
+            <h3>Automagic<h3>
+          </article>
+        </section>
+
+        <section>
+          <article>
+            <h4>Semantic</h4>
+            <p>
+              bb.css has a simplified grid system that is based on semantic css tags.<br>
+            </p>
+          </article>
+
+          <article>
+            <h4>Sections</h4>
+            <p>
+              <code>&lt;section&gt;</code> tags act as rows, and use: <code>display: flex;</code>. Every <code>&lt;section&gt;</code> tag must contain an <code>&lt;article&gt;</code> tag.
+            </p>
+          </article>
+
+          <article>
+            <h4>Articles</h4>
+            <p>
+              <code>&lt;article&gt;</code> tags act as columns in a row, and should be contained within a <code>&lt;section&gt;</code> tag.
+            </p>
+          </article>
+        </section>
+
+        <section>
+          <article class="one-quarter">
+            <h4>Classy</h4>
+            <p>
+              There is a grid system based on one eighth fractions.
+            </p>
+          </article>
+
+          <article class="three-quarter">
+            <h4>Sections</h4>
+            <p>
+              For example, the left column takes up one quarter of this row, this column is takes up three quarters of this row.
+            </p>
+            <p>
+              On small screens, these columns will stack nicely.
+            </p>
+          </article>
+        </section>
+
+        <section>
+          <article>
+            <h2><i class="fa fa-text-width fa-fw" aria-hidden="true"></i>Text Content</h2>
+            <h3>Description Lists</h3>
+            <dl>
+              <dt>definition term</dt>
+              <dd>the description of a term in a description list element</dd>
+              <dt>definition term</dt>
+              <dd>the description of a term in a description list element</dd>
+            </dl>
+
+            <h3>Figures</h3>
+            <figure>
+              <img alt="Generic Image" src="figure-image.jpg">
+            </figure>
+            <figure>
+              <img alt="Generic Image" src="figure-image.jpg">
+              <figcaption>Figure caption.</figcaption>
+            </figure>
+
+            <h3>Horizontal Rules</h3>
+            <hr>
+
+            <h3>Lists</h3>
+            <h4>Ordered Lists</h4>
+            <ol>
+              <li>List item 1</li>
+              <li>List item 2</li>
+              <ol>
+                <li>Subordinate List item 1</li>
+                <li>Subordinate List item 2</li>
+                <li>Subordinate List item 3</li>
+              </ol>
+              <li>List item 3</li>
+            </ol>
+            <h4>Unordered Lists</h4>
+            <ul>
+              <li>List item 1</li>
+              <li>List item 2</li>
+              <li>List item 3</li>
+            </ul>
+
+            <h3>Paragraphs</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+
+            <h2><i class="fa fa-font fa-fw" aria-hidden="true"></i> Inline Text Content</h2>
+            <h3>Anchors</h3>
+            <p>This is what a <a href="https://www.jpmck.com/" target="_blank">link</a> looks like.</p>
+
+            <h3>Abbreviations</h3>
+            <p>This is what an <abbr title="abbreviation">abbr</abbr> looks like.</p>
+
+            <h3>Blockquotes, Quotes and Cites</h3>
+            <blockquote cite="http://www.jpmck.com/">
+              <p>This is what a blockquote looks like. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <cite>Some Cite</cite>
+            </blockquote>
+            <p>This is what an <q cite="https://www.jpmck.com/">inline quote</q> looks like.</p>
+
+            <h3>Breaks</h3>
+            <p>This is what a<br>break looks like.</p>
+
+            <h3>Code, Keyboard Input, Samples, Variables</h3>
+            <p>This is what <code>code</code> looks like.</p>
+            <p>This is what keyboard input looks like: Press <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Del</kbd>.</p>
+            <p>This is what <pre><samp>&gt; Sample Output that is from a terminal, or wherever...<br>&gt; Sample Input looks like exactly the same... it is wrapped in &lt;pre&gt; tags.</samp></pre></p>
+            <p>This is what a <var>variable</var> looks like.</p>
+
+            <h3>Deletions, Marked and Insertions</h3>
+            <p>This is what a <del>deletion</del> looks like, this is what <mark>marked</mark> text looks like and this is what an <ins>insertion</ins> looks like.</p>
+
+            <h3>Emphasis and Strong</h3>
+            <p>This is what <em>emphasis</em> and <strong>strong</strong> text looks like.</p>
+
+            <h3>Small, Subscript and Superscript</h3>
+            <p>This is what <small>small</small> text looks like, this is what <sub>subscript</sub> text looks like, and this is what <sup>superscript</sup> text looks like.</p>
+          </article>
+        </section>
+
+        <section>
+          <article>
+            <h2><i class="fa fa-table fa-fw" aria-hidden="true"></i> Tables</h2>
+            <table>
+              <thead>
+                  <tr>
+                      <th>#</th>
+                      <th>Make</th>
+                      <th>Model</th>
+                      <th>Year</th>
+                  </tr>
+              </thead>
+
+              <tbody>
+                  <tr>
+                      <td>1</td>
+                      <td>Honda</td>
+                      <td>Accord</td>
+                      <td>2009</td>
+                  </tr>
+
+                  <tr>
+                      <td>2</td>
+                      <td>Toyota</td>
+                      <td>Camry</td>
+                      <td>2012</td>
+                  </tr>
+
+                  <tr>
+                      <td>3</td>
+                      <td>Hyundai</td>
+                      <td>Elantra</td>
+                      <td>2010</td>
+                  </tr>
+              </tbody>
+            </table>
+          </article>
+        </section>
+
+        <section>
+          <article>
+            <h2><i class="fa fa-list-alt" aria-hidden="true"></i> Forms</h2>
+          </article>
+        </section>
+
+        <form>
+        <section>
+          <article class="one-half">
+            <input type="date"></input><label>date</label>
+          </article>
+          <article class="one-half">
+            <input type="time"></input><label>time</label>
+          </article>
+        </section>
+
+        <section>
+          <article class="one-third">
+            <input type="email" disabled value="disabled@diabled.com"></input><label>email</label>
+          </article>
+          <article class="one-third">
+            <input type="url"></input><label>url</label>
+          </article>
+          <article class="one-third">
+            <input type="password"></input><label>password</label>
+          </article>
+        </section>
+
+        <section>
+          <article class="one-half">
+            <input type="tel"></input><label>tel</label>
+          </article>
+          <article class="one-half">
+            <input type="search"></input><label>search</label>
+          </article>
+        </section>
+
+        <section>
+          <article class="one-half">
+            <input type="text"></input><label>text</label>
+          </article>
+          <article class="one-half">
+            <input type="number"></input><label>number</label>
+          </article>
+        </section>
+
+        <section>
+          <article>
+            <textarea></textarea>
+            <label>textarea</label>
+          </article>
+        </section>
+
+        <section>
+          <article class="one-half">
+            <fieldset>
+              <legend>Legend</legend>
+              <input type="checkbox"></input><label>checkbox</label>
+              <input type="checkbox"></input><label>checkbox</label>
+              <input type="checkbox"></input><label>checkbox</label>
+            </fieldset>
+          </article>
+          <article class="one-half">
+            <fieldset>
+              <legend>Legend</legend>
+              <input type="radio" name="radio" value="1"></input><label>radio</label>
+              <input type="radio" name="radio" value="2"></input><label>radio</label>
+              <input type="radio" name="radio" value="3"></input><label>radio</label>
+            </fieldset>
+          </article>
+        </section>
+
+        <section>
+          <article class="one-half">
+            <input type="range"></input><label>range</label>
+          </article>
+          <article class="one-half">
+            <select>
+              <option>Option 1</option>
+              <option>Option 2</option>
+            </select>
+          </article>
+        </section>
+
+        <section>
+          <article class="one-third">
+            <input type="reset"></input>
+          </article>
+          <article class="one-third">
+            <input type="submit"></input>
+          </article>
+          <article class="one-third">
+            <input type="button" value="button"></input>
+          </article>
+        </section>
+        </form>
+    </script>
+
+    <script type="text/ng-template" id="pages/download.html">
+      <section>
+        <article>
+          <h2><i class="fa fa-download fa-fw" aria-hidden="true"></i> Download</h2>
+          <p>Download bb.css: <code><a href="bb.css">bb.css</a></code></p>
+          <p>Download minified: <code><a href="bb.min.css">bb.min.css</a></code></p>
+          <h2><i class="fa fa-copyright fa-fw" aria-hidden="true"></i> License</h2>
+          <p>bb.css is licensed with the MIT License.</p>
+        </article>
+      </section>
+    </script>
+
+    <nav>
+       <ul>
+         <li><a href="#/home"><i class="fa fa-home fa-fw" aria-hidden="true"></i> bb.css</a></li>
+         <li><a href="#/style"><i class="fa fa-code fa-fw" aria-hidden="true"></i> Style</a></li>
+         <li><a href="#/download"><i class="fa fa-download fa-fw" aria-hidden="true"></i> Download</a></li>
+         <li><a href="https://github.com/jpmck/bb.css/"><i class="fa fa-github fa-fw" aria-hidden="true"></i> GitHub</a></li>
+       </ul>
+     </nav>
+
+    <header>
+       <h1>bb.css</h1>
+       <p>
+         bb.css (pronounced <em>'bibi si ɛs ɛs</em>) is a bare bones css framework.
+       </p>
+     </header>
+
+    <main>
+       <div ng-view></div>
+     </main>
+
+    <footer>
+        Copyright &copy; 2016, Jim McKenna.<br>
+        This work is licensed under the MIT License.
+      </footer>
+
+    <script src="bb.js"></script>
+  </body>
+
+</html>
