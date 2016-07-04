@@ -1,5 +1,9 @@
-@import 'https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro|Source+Serif+Pro';
-@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css';
+/*  BB.CSS
+    bb.css (pronounced 'bibi si ɛs ɛs) is a bare bones css framework.
+
+    Copyright © 2016, Jim McKenna (jim@jpmck.com).
+    This work is licensed under the MIT License.
+*/
 
 *, *:before, *:after{
   box-sizing: inherit;
@@ -110,7 +114,6 @@ footer{
   color: #9E9E9E;
   font-family: "Source Serif Pro", serif;
   font-size: 80%;
-  margin-top: 1px solid #9E9E9E;
   padding: 1.5em 1em;
   text-align: center;
 }
@@ -147,12 +150,33 @@ hr{
   background: #616161;
 }
 
-html {
+html{
   box-sizing: border-box;
   background-color: #FAFAFA;
   color: #212121;
   font-family: 'Source Sans Pro', sans-serif;
-  /*font-size: 20px;*/
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+img.left{
+  float: left;
+  padding-right: 0.25em
+}
+
+img.quarter{
+  width: 25%;
+}
+
+img.right{
+  float: right;
+  padding-left: 0.25em;
+}
+img.third{
+  width: calc(100% / 3);
 }
 
 input,
@@ -277,12 +301,13 @@ main{
 }
 
 mark{
-  background-color: rgba(#ffeb3b, 0.54);
+  background-color: #ffeb3b;
+  background-color: rgba(255, 235, 59, 0.54);
   padding:  0 calc(1em / 8);
 }
 
 pre, table{
-  autoflow-x: auto;
+  overflow-x: auto;
   white-space: pre-wrap;
 }
 

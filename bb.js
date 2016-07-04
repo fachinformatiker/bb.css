@@ -22,15 +22,3 @@ app.config(function($routeProvider) {
     redirectTo: '/'
   });
 });
-
-app.controller('HomeController', function($scope) {
-  $scope.message = 'Hello from HomeController';
-});
-
-app.controller('StyleController', function($scope) {
-  $scope.message = 'Hello from BlogController';
-});
-
-app.controller('AboutController', function($scope) {
-  $scope.message = 'Hello from DownloadController';
-});
