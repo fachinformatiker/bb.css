@@ -65,7 +65,7 @@
         <article>
           <h4>Sections</h4>
           <p>
-            <code>&lt;section&gt;</code> tags act as rows, and use: <code>display: flex;</code>. Every <code>&lt;section&gt;</code> tag must contain an <code>&lt;article&gt;</code> tag.
+            <code>&lt;section&gt;</code> tags act as rows, and use: <code>display: flex;</code>. Every <code>&lt;section&gt;</code> should contain at least one <code>&lt;article&gt;</code>.
           </p>
         </article>
 
@@ -78,20 +78,23 @@
       </section>
 
       <section>
-        <article class="one-third">
-          <h4>Classy</h4>
+        <article class="one-fourth">
+          <h4>Classes</h4>
           <p>
-            There is a grid system based on one eighth fractions.
-          </p>
-        </article>
-
-        <article class="two-third">
-          <h4>Sections</h4>
-          <p>
-            For example, the left column <code>class="one-third"</code> takes up one third of this row, this column <code>class="two-third"</code> takes up two thirds of this row.
+            There is a grid system based on one quarter and one third fractions.
           </p>
           <p>
             On small screens, these columns will stack nicely.
+          </p>
+        </article>
+
+        <article class="three-fourth">
+          <h4>Fractions</h4>
+          <p>
+            For example, the left column <code>class="one-fourth"</code> takes up one fourth of this row, this column <code>class="three-fourth"</code> takes up three fourths of this row.
+          </p>
+          <p>
+            The following classes are available: <code>one-whole</code>, <code>one-forth</code>, <code>one-third</code>, <code>one-half</code>, <code>two-third</code> and <code>three-fourth</code>.
           </p>
         </article>
       </section>
@@ -99,7 +102,7 @@
       <section>
         <article>
           <h2><i class="fa fa-text-width fa-fw" aria-hidden="true"></i>Text Content</h2>
-          <h3>Description Lists</h3>
+          <h3><i class="fa fa-th-list fa-fw" aria-hidden="true"></i> Description Lists</h3>
           <dl>
             <dt>bb.css</dt>
             <dd>barebones css (bb.css, pronounced 'bibi si ɛs ɛs), a bare bones css framework</dd>
@@ -107,7 +110,7 @@
             <dd>cascading style sheets (css), a style sheet language used for describing the presentation of a document written in a markup language</dd>
           </dl>
 
-          <h3>Figures</h3>
+          <h3><i class="fa fa-picture-o fa-fw" aria-hidden="true"></i> Figures</h3>
           <figure>
             <img alt="Generic Image" src="figure-image.jpg">
           </figure>
@@ -116,23 +119,18 @@
             <figcaption>Figure caption.</figcaption>
           </figure>
 
-          <h3>Horizontal Rules</h3>
+          <h3><i class="fa fa-minus fa-fw" aria-hidden="true"></i> Horizontal Rules</h3>
           <hr>
 
-          <h3>Images</h3>
-          <p>All images are responsive. By default, an image will take up 100% of the container it is in.</p>
+          <h3><i class="fa fa-picture-o fa-fw" aria-hidden="true"></i> Images</h3>
+          <p>All images are responsive. By default, an image by itself will take up 100% of the container it is in as is shown below.</p>
           <img alt="Generic Image" src="figure-image.jpg">
-          <p><img alt="Generic Image" class="right third" src="figure-image.jpg">There are four helper classes for when a full sized image isn't desired:</p>
-          <ul>
-            <li><code>class="left"</code></li>
-            <li><code>class="right"</code></li>
-            <li><code>class="quarter"</code></li>
-            <li><code>class="third"</code></li>
-          </ul>
-          <p>The image to the right is using <code>class="right third"</code>.</p>
+          <p><img alt="Generic Image" src="figure-image.jpg">However, there is an exception to this rule…</p>
+          <p>If an image is placed <em>within</em> <code>&lt;p> &lt;/p></code> tags, it will float to the right and have a maximum width of 33%. This is useful for when you are writing large blocks of text and want an image as to not break up your text.</p>
+          <p>The image to the right is using no classes at all, it's simply floating there.</p>
 
-          <h3>Lists</h3>
-          <h4>Ordered Lists</h4>
+          <h3><i class="fa fa-list fa-fw" aria-hidden="true"></i> Lists</h3>
+          <h4><i class="fa fa-list-ol fa-fw" aria-hidden="true"></i> Ordered Lists</h4>
           <ol>
             <li>List item 1</li>
             <li>List item 2</li>
@@ -143,48 +141,48 @@
             </ol>
             <li>List item 3</li>
           </ol>
-          <h4>Unordered Lists</h4>
+          <h4><i class="fa fa-list-ul fa-fw" aria-hidden="true"></i> Unordered Lists</h4>
           <ul>
             <li>List item 1</li>
             <li>List item 2</li>
             <li>List item 3</li>
           </ul>
 
-          <h3>Paragraphs</h3>
+          <h3><i class="fa fa-align-left fa-fw" aria-hidden="true"></i> Paragraphs</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Paragraphs are simple affairs—nothing to see here. Have some lorem ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+          <p>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
 
           <h2><i class="fa fa-font fa-fw" aria-hidden="true"></i> Inline Text Content</h2>
-          <h3>Anchors</h3>
+          <h3><i class="fa fa-link fa-fw" aria-hidden="true"></i> Anchors</h3>
           <p>This is what a <a href="https://www.jpmck.com/" target="_blank">link</a> looks like.</p>
 
-          <h3>Abbreviations</h3>
+          <h3><i class="fa fa-ellipsis-h fa-fw" aria-hidden="true"></i> Abbreviations</h3>
           <p>This is what an <abbr title="abbreviation">abbr</abbr> looks like.</p>
 
-          <h3>Blockquotes, Quotes and Cites</h3>
+          <h3><i class="fa fa-quote-left fa-fw" aria-hidden="true"></i> Blockquotes, Quotes and Cites</h3>
           <blockquote cite="http://www.jpmck.com/">
             <p>This is what a blockquote looks like. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <cite>Some Cite</cite>
           </blockquote>
           <p>This is what an <q cite="https://www.jpmck.com/">inline quote</q> looks like.</p>
 
-          <h3>Breaks</h3>
-          <p>This is what a<br>break looks like.</p>
-
-          <h3>Code, Keyboard Input, Samples, Variables</h3>
+          <h3><i class="fa fa-code fa-fw" aria-hidden="true"></i> Code, Keyboard Input, Samples, Variables</h3>
           <p>This is what <code>code</code> looks like.</p>
           <p>This is what keyboard input looks like: Press <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Del</kbd>.</p>
           <p>This is what <pre><samp>&gt; Sample Output that is from a terminal, or wherever...<br>&gt; Sample Input looks like exactly the same... it is wrapped in &lt;pre&gt; tags.</samp></pre></p>
           <p>This is what a <var>variable</var> looks like.</p>
 
-          <h3>Deletions, Marked and Insertions</h3>
+          <h3><i class="fa fa-strikethrough fa-fw" aria-hidden="true"></i> Deletions, Marked and Insertions</h3>
           <p>This is what a <del>deletion</del> looks like, this is what <mark>marked</mark> text looks like and this is what an <ins>insertion</ins> looks like.</p>
 
-          <h3>Emphasis and Strong</h3>
-          <p>This is what <em>emphasis</em> and <strong>strong</strong> text looks like.</p>
+          <h3><i class="fa fa-bold fa-fw" aria-hidden="true"></i> Emphasis and Strong</h3>
+          <p>This is what <em>emphasis</em> and <strong>strong</strong> text looks like. (Use <code>em</code> and <code>strong</code>, not <code>i</code> and <code>b</code>!)</p>
 
-          <h3>Small, Subscript and Superscript</h3>
+          <h3><i class="fa fa-superscript fa-fw" aria-hidden="true"></i> Small, Subscript and Superscript</h3>
           <p>This is what <small>small</small> text looks like, this is what <sub>subscript</sub> text looks like, and this is what <sup>superscript</sup> text looks like.</p>
         </article>
       </section>
@@ -199,6 +197,8 @@
                     <th>Make</th>
                     <th>Model</th>
                     <th>Year</th>
+                    <th>Transmission</th>
+                    <th>Doors</th>
                 </tr>
             </thead>
 
@@ -208,6 +208,8 @@
                     <td>Honda</td>
                     <td>Accord</td>
                     <td>2009</td>
+                    <td>Automatic</td>
+                    <td>2</td>
                 </tr>
 
                 <tr>
@@ -215,6 +217,8 @@
                     <td>Toyota</td>
                     <td>Camry</td>
                     <td>2012</td>
+                    <td>Manual</td>
+                    <td>4</td>
                 </tr>
 
                 <tr>
@@ -222,6 +226,8 @@
                     <td>Hyundai</td>
                     <td>Elantra</td>
                     <td>2010</td>
+                    <td>Automatic</td>
+                    <td>4</td>
                 </tr>
             </tbody>
           </table>
@@ -230,7 +236,7 @@
 
       <section>
         <article>
-          <h2><i class="fa fa-list-alt" aria-hidden="true"></i> Forms</h2>
+          <h2><i class="fa fa-list-alt fa-fw" aria-hidden="true"></i> Forms</h2>
         </article>
       </section>
 
@@ -330,7 +336,7 @@
       <section>
         <article>
           <h2><i class="fa fa-download fa-fw" aria-hidden="true"></i> Download</h2>
-          <p>bb.css is 6.9 KB, minified is 5.1 KB, and gzipped is 1.7 KB!</p>
+          <p>bb.css is 6.3 KB, minified is 4.4 KB, and gzipped is 1.5 KB!</p>
           <p>Download bb.css: <code><a href="css/bb.css">bb.css</a></code></p>
           <p>Download minified: <code><a href="css/bb.min.css">bb.min.css</a></code></p>
           <h2><i class="fa fa-copyright fa-fw" aria-hidden="true"></i> License</h2>
@@ -339,20 +345,19 @@
       </section>
     </script>
 
-    <nav>
-       <ul>
-         <li><a href="#/home"><i class="fa fa-home fa-fw" aria-hidden="true"></i> bb.css</a></li>
-         <li><a href="#/style"><i class="fa fa-code fa-fw" aria-hidden="true"></i> Style</a></li>
-         <li><a href="#/download"><i class="fa fa-download fa-fw" aria-hidden="true"></i> Download</a></li>
-         <li><a href="https://github.com/jpmck/bb.css/"><i class="fa fa-github fa-fw" aria-hidden="true"></i> GitHub</a></li>
-       </ul>
-     </nav>
-
     <header>
        <h1>bb.css</h1>
        <p>
          bb.css (pronounced <em>'bibi si ɛs ɛs</em>) is a bare bones css framework.
        </p>
+       <nav>
+          <ul>
+            <li><a href="#/home"><i class="fa fa-home fa-fw" aria-hidden="true"></i> bb.css</a></li>
+            <li><a href="#/style"><i class="fa fa-code fa-fw" aria-hidden="true"></i> Style</a></li>
+            <li><a href="#/download"><i class="fa fa-download fa-fw" aria-hidden="true"></i> Download</a></li>
+            <li><a href="https://github.com/jpmck/bb.css/"><i class="fa fa-github fa-fw" aria-hidden="true"></i> GitHub</a></li>
+          </ul>
+        </nav>
      </header>
 
     <main>
@@ -362,7 +367,7 @@
     <footer>
         Copyright &copy; 2016, Jim McKenna.<br>
         This work is licensed under the MIT License.
-      </footer>
+    </footer>
 
     <script src="bb.js"></script>
   </body>
