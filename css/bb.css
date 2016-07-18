@@ -285,6 +285,7 @@ kbd{
 }
 
 main{
+  display: block;
   margin: 0 auto;
   padding: 0.5em;
 }
@@ -371,7 +372,7 @@ thead{
   }
 
   main{
-    padding: 2em 1em;
+    padding: 1em;
     max-width: 42em;
   }
 
