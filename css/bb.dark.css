@@ -1,0 +1,414 @@
+/*  BB.CSS
+    bb.css (pronounced 'bibi si ɛs ɛs) is a bare bones css framework.
+
+    Copyright © 2016, Jim McKenna (jim@jpmck.com).
+    This work is licensed under the MIT License.
+*/
+
+*, *:before, *:after{
+  box-sizing: inherit;
+}
+
+a{
+  color: #9E9E9E;
+  transition: color 0.5s;
+}
+  a:hover{
+    color: #2196F3;
+    cursor: pointer;
+    transition: color 0.5s;
+  }
+
+abbr{
+  text-decoration: none;
+}
+  abbr:hover{
+    cursor: help;
+  }
+
+article{
+  overflow-x: auto;
+  flex-basis: 100%;
+  padding: 0  ;
+}
+
+blockquote{
+  font-family: "Source Serif Code", serif;
+}
+  blockquote p:after{
+    content: close-quote;
+  }
+  blockquote p:before{
+    content: open-quote;
+  }
+  blockquote cite:before{
+    content: '-\0000a0';
+}
+
+body{
+  background-color: #212121;
+  color: #FAFAFA;
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 1.6;
+  margin: 0 0 4em 0; /* accunts for footer */
+  overflow-x: auto;
+}
+
+code,
+kbd,
+pre,
+samp,
+var{
+  font-family: 'Source Code Pro', monospace;
+  font-style: normal; /* don't italicize variables */
+}
+
+code,
+ins,
+var{
+  background-color: #757575;
+  padding:  0 calc(1em / 8);
+  text-decoration: none;
+}
+
+dd{
+  margin-left: 1em;
+  padding-bottom: 0.5em;
+}
+
+del{
+  color: #D32F2F;
+}
+
+dt{
+  font-style: italic;
+  font-weight: normal;
+}
+
+fieldset{
+  border: solid 1px #616161;
+}
+
+fieldset legend{
+  font-size: 80%;
+}
+
+figcaption{
+  font-style: italic;
+  font-size: 80%;
+  padding-top: 1em;
+}
+
+figure{
+  background-color: #E0E0E0;
+  padding: 1em;
+}
+  figure img{
+    height: auto;
+    max-width: 100%;
+  }
+
+footer{
+  bottom: 0;
+  color: #9E9E9E;
+  font-family: "Source Serif Pro", serif;
+  font-size: 80%;
+  height: 4em; /* see body margin if cahnging */
+  left: 50%;
+  margin-left: -40%;
+  padding: 0.5em;
+  position: absolute;
+  text-align: center;
+  width: 80%;
+}
+
+form{
+  width: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-family: 'Source Serif Pro', serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.2;
+  margin: 1.6em 0 0 0;
+}
+
+header{
+  font-family: "Source Serif Pro", serif;
+  margin: 0 auto;
+  max-width: 42em;
+  text-align: center;
+  /*padding-top: 1.5em;*/
+}
+  header h1{
+    font-size: 2.5em;
+  }
+
+hr{
+  border: 0;
+  height: 1px;
+  background: #616161;
+}
+
+html{
+  box-sizing: border-box;
+  min-height: 100%;
+  position: relative;
+}
+
+img{
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0.5em 0;
+}
+  p img{
+    /* images in paragraphs float to the right and take up at most a third of the paragraph width */
+    float: right;
+    padding: 0.25em 0 0.25em 0.25em;
+    max-width: calc(100% / 3);
+  }
+
+input,
+textarea{
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  font: inherit;
+}
+  input:disabled,
+  textarea:disabled{
+    color: #9E9E9E;
+  }
+  input:focus,
+  textarea:focus{
+    outline: none;
+  }
+
+input + label,
+textarea + label{
+  font-size: 80%;
+  transition: 0.5s;
+}
+  input:disabled + label,
+  textarea:disabled + label{
+    color: #9E9E9E;
+  }
+  input:focus + label,
+  textarea:focus + label{
+    color: #2196F3;
+    transition: 0.5s;
+  }
+
+input[type^=date],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=range],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week],
+textarea{
+  border-bottom: solid 1px #616161;
+  color: inherit;
+  display: block;
+  transition: border 0.5s;
+  width: 100%;
+}
+  input[type^=date]:focus,
+  input[type=email]:focus,
+  input[type=month]:focus,
+  input[type=number]:focus,
+  input[type=password]:focus,
+  input[type=range]:focus,
+  input[type=search]:focus,
+  input[type=tel]:focus,
+  input[type=text]:focus,
+  input[type=time]:focus,
+  input[type=url]:focus,
+  input[type=week]:focus,
+  textarea:focus{
+    border-bottom: solid 1px #2196F3;
+    transition: border 0.5s;
+  }
+
+input[type=password]{
+  font-family: "Source Code Pro", fixed;
+}
+
+input[type=button],
+input[type=reset],
+input[type=submit]{
+  background-color: #FFFFFF;
+  border: solid 1px #616161;
+  color: #616161;
+  text-align: center;
+  transition: 0.5s;
+}
+  input[type=button]:focus,
+  input[type=reset]:focus,
+  input[type=submit]:focus,
+  input[type=button]:hover,
+  input[type=reset]:hover,
+  input[type=submit]:hover{
+    background-color: #2196F3;
+    color: #FFFFFF;
+    transition: 0.5s;
+  }
+
+input[type=checkbox] + label,
+input[type=radio] + label{
+  display: inline;
+  font-size: 100%
+}
+
+input[type=color]:focus + label,
+input[type=file]:focus + label,
+input[type=image]:focus + label{
+  color: #2196F3;
+}
+
+kbd{
+  background: #E0E0E0;
+  border-radius: 0.25em;
+  box-shadow: 1px 1px #5e5e5e;
+  color: #424242;
+  padding: 0 0.25em;
+}
+
+main{
+  display: block;
+  margin: 0 auto;
+  padding: 0.5em;
+}
+
+mark{
+  background-color: #ffeb3b;
+  background-color: rgba(255, 235, 59, 0.54);
+  padding:  0 calc(1em / 8);
+}
+
+nav{
+  border-bottom:1px solid #ccc;
+  text-align:center;
+}
+  nav ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style:none;
+    margin: 0;
+    padding: 0;
+  }
+  nav li{
+    flex-grow: 1;
+    margin: 0;
+  }
+  nav a{
+    display:inline-block;
+    outline: none;
+    padding: 0 1em;
+    text-decoration: none;
+  }
+
+p{
+  margin: 0;
+}
+
+pre, table{
+  overflow-x: auto;
+  white-space: pre-wrap;
+}
+
+samp{
+  background-color: #424242;
+  color: #E0E0E0;
+  padding: 0.5em;
+  display: block;
+}
+
+section{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 0.5em;
+  max-width: 100%;
+  overflow: auto;
+  vertical-align: top;
+}
+
+td, th{
+  border: 1px solid #616161;
+  empty-cells: show;
+  padding: 0.25em 1em;
+}
+
+thead{
+  background-color: #9E9E9E;
+}
+
+/* DESKTOP STYLES */
+@media screen and (min-width: 42em){
+  article{
+    flex: 1;
+    padding: 0 0.5em 0.5em 0;
+  }
+
+  body{
+    font-size: 20px;
+  }
+
+  main{
+    padding: 2em 1em;
+    max-width: 42em;
+  }
+
+  /* flex fractions */
+  .one-whole{
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .one-fourth,
+  .one-quarter{
+    flex: 1 1 25%;
+    max-width: 25%
+  }
+
+  .one-third{
+    flex: 1 1 calc(100% / 3);
+    max-width: calc(100% / 3)
+  }
+
+  .one-half{
+    flex: 1 1 50%;
+    max-width: 50%;
+  }
+
+  .two-third{
+    flex: 1 1 calc(100% * (2 / 3));
+    max-width: calc(100% * (2 / 3));
+  }
+
+  .three-fourth,
+  .three-quarter{
+    flex: 1 1 75%;
+    max-width: 75%
+  }
+}
